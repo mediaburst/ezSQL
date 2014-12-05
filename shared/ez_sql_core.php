@@ -530,6 +530,17 @@
 
 		}
 
+		public function cacheOn($time = 24){
+			$this->cache_queries = true;
+			$this->use_disk_cache = true;
+			$this->cache_timeout = $time;
+		}
+		
+		public function cacheOff(){
+			$this->cache_queries = false;
+			$this->use_disk_cache = false;
+		}
+
 		/**********************************************************************
 		*  Naughty little function to ask for some remuniration!
 		*/
